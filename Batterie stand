@@ -1,0 +1,23 @@
+batterie stand anzeigen 
+verbeserug vorschläge dürfen gemacht werden 
+code in vs studio kopiren 
+in arbeit 
+Code 
+"""Batteriestands- und Hindernis-Check für TurtleBot3.
+
+1) Benutzer gibt Batteriestand in Prozent an.
+2) Wenn < 20%: Warnung ausgeben, der TurtleBot3 fährt nicht los.
+3) Wenn >= 20%: Weiter wie in Aufgabe 3 (Entfernung prüfen und Richtung ausgeben).
+"""
+
+SCHWELLE_BATTERIE = 20
+SCHWELLE_HINDERNIS = 0.5
+
+batter_str = input("Geben Sie den aktuellen Batteriestand in Prozent ein: ")
+
+try:
+    batterie = float(batter_str.replace(",", "."))
+except ValueError:
+    print("Ungültige Eingabe. Bitte Prozent als Zahl eingeben (z.B. 75).")
+    raise SystemExit(1)
+
